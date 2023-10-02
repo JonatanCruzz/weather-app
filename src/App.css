@@ -1,0 +1,134 @@
+.app {
+    background-size: cover;
+    background-position: center;
+}
+
+.loader {
+    background-image: url("/backgrounds/bgLoader.png");
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.brokenClouds {
+    background-image: url("/backgrounds/bg1.jpg");
+}
+
+.clearSky {
+    background-image: url("/backgrounds/bg2.jpg");
+}
+
+.fewClouds {
+    background-image: url("/backgrounds/bg3.jpg");
+}
+
+.scatteredClouds {
+    background-image: url("/backgrounds/bg4.jpg");
+}
+
+.overcastClouds {
+    background-image: url("/backgrounds/bg1.jpg");
+}
+
+.rain {
+    background-image: url("/backgrounds/bg5.jpg");
+}
+
+.showerRain {
+    background-image: url("/backgrounds/bg6.jpg");
+}
+
+.lightRain {
+    background-image: url("/backgrounds/bg6.jpg");
+}
+
+.snow {
+    background-image: url("/backgrounds/bg7.jpg");
+}
+
+.mist {
+    background-image: url("/backgrounds/bg7.jpg");
+}
+
+.windy {
+    background-image: url("/backgrounds/bg8.jpg");
+}
+
+.thunderStorm {
+    background-image: url("/backgrounds/bg9.jpg");
+}
+
+.dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    /* Color de fondo predeterminado del interruptor */
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.dark-icon {
+    color: #fff;
+}
+
+.light-icon {
+    color: #000;
+}
+
+.dark-image-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 1;
+}
