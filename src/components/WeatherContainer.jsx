@@ -6,6 +6,7 @@ const weatherIcons = {
     "few clouds": "/icons/02d.png",
     "scattered clouds": "/icons/03d.png",
     "overcast clouds": "/icons/04d.png",
+    "broken clouds": "/icons/04d.png",
     "windy": "/icons/05d.png",
     "shower rain": "/icons/09d.png",
     "rain": "/icons/10d.png",
@@ -47,7 +48,7 @@ const WeatherContainer = ({ weather, isDarkMode }) => {
     }, []);
 
     const containerClass = isDarkMode ? "bg-[#29292b75] text-white" : "bg-[#dcdfe575] text-black";
-    const buttonClassDarkMode = isDarkMode ? "bg-[#0058aad2] text-white hover:bg-[#0057aa]" : "bg-[#ffffff] text-[#0057aa]";
+    const buttonClassDarkMode = isDarkMode ? "bg-[#0058aad2] text-white hover:bg-[#0057aa]" : "bg-[#ffffff] text-[#0057aa] hover:bg-[#ffffff46]";
     const windIcon = isDarkMode ? "/wind.png" : "/windBlack.png";
     const humidityIcon = isDarkMode ? "/humidity.png" : "/humidityBlack.png";
     const pressureIcon = isDarkMode ? "/pressure.png" : "/pressureBlack.png";
@@ -59,7 +60,7 @@ const WeatherContainer = ({ weather, isDarkMode }) => {
 
             <div className="gap-5 grid sm:grid-cols-[1fr_auto]">
                 {/* seccion superior */}
-                <article className={`bg-[#dcdfe575] rounded-2xl grid grid-cols-2 items-center p-3 gap-4 ${containerClass}`}>
+                <article className={`rounded-2xl grid grid-cols-2 items-center p-3 gap-4 ${containerClass}`}>
                     <h4 className="col-span-2 text-lg capitalize">{weather.weather[0].description}</h4>
                     <span className="text-5xl">{changeUnitTemp(weather.main.temp)}</span>
                     <div>
@@ -69,7 +70,7 @@ const WeatherContainer = ({ weather, isDarkMode }) => {
 
                 {/* seccion inferior */}
                 <article className={`grid grid-cols-3 
-                justify-items-center bg-[#dcdfe575] rounded-2xl p-2 
+                justify-items-center rounded-2xl p-2 
                 py-3 sm:grid-cols-1 ${containerClass}`}>
                     <WeatherStats icon={windIcon} unit="m/s" value={weather.wind.speed} isDarkMode={isDarkMode} />
                     <WeatherStats icon={humidityIcon} unit="%" value={weather.main.humidity} isDarkMode={isDarkMode} />
@@ -78,8 +79,8 @@ const WeatherContainer = ({ weather, isDarkMode }) => {
 
                 <div className="flex justify-center items-center">
                     <button onClick={handleChangeUnit}
-                        className={`text-[#0057aa] bg-[#ffffff] w-32 rounded-full py-1 shadow-xl
-                        hover:bg-[#ffffffc1] ${buttonClassDarkMode}`}>{isCelsius ? "Cambiar a °F" : "Cambiar a °C"}
+                        className={`w-32 rounded-full py-1 shadow-xl ${buttonClassDarkMode}`}>
+                        {isCelsius ? "Cambiar a °F" : "Cambiar a °C"}
                     </button>
                 </div>
 
