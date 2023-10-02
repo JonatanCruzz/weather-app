@@ -84,7 +84,6 @@
     right: 0;
     bottom: 0;
     background-color: #ccc;
-    /* Color de fondo predeterminado del interruptor */
     transition: 0.4s;
     border-radius: 34px;
 }
