@@ -11,6 +11,7 @@ const weatherBackground = {
   "scatteredClouds": "scatteredClouds",
   "rain": "rain",
   "showerRain": "showerRain",
+  "moderateRain": "moderateRain",
   "lightRain": "lightRain",
   "snow": "snow",
   "mist": "mist",

@@ -10,6 +10,7 @@ const weatherIcons = {
     "windy": "/icons/05d.png",
     "shower rain": "/icons/09d.png",
     "rain": "/icons/10d.png",
+    "moderate rain": "/icons/10d.png",
     "light rain": "/icons/10d.png",
     "thunderstorm": "/icons/11d.png",
     "snow": "/icons/13d.png",
